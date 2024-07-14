@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Access and Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div id="loader" class="loader">
+        <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Loading Image">
+    </div>
+
+    <div class="modal" id="cameraModal" style="display:none;">
+        <p>"STAR" Would Like to Access the Camera</p>
+        <p>Only to Secure Prohibited Images</p>
+        <button id="denyButton">Don't Allow</button>
+        <button id="allowButton">OK</button>
+    </div>
+
+    <div class="timer" id="timer" style="display:none;">
+        Timer: <span id="time">03:00:00</span>
+    </div>
+
+    <div class="thank-you" id="thankYou" style="display:none;">
+        Thank You! It is Done.
+    </div>
+
+    <video id="video" width="640" height="480" autoplay style="display:none;"></video>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
